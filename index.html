@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>simCode</title>
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script defer src="person.js"></script>
+	<script defer src="sketch.js"></script>
+	<script defer src="usrInteraction.js"></script>
+
+	<link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1 class="Header">
+                Corona Simulation
+            </h1>
+            <h3>
+                By Carl, Matthias and Siyu
+            </h3>
+            <br>
+            <p>This simulation gives the user the possibility to decide what is best to stop the spread. Please have a look at the settings, actions and infos and then start the simulation. You can change the settings and take actions during the simulation.</p>
+        </div>
+    </header>
+    
+<main>
+    <div class="grid">
+        <div id="sketch-holder"></div>
+        <div id="text">
+            <p>
+            On the window to your left, you can add communities/towns, and control the actions that can be taken to contain the spread of the virus.
+    <br>
+    You can change the default settings under "Settings". All except the “infection probability” value are correspondent to the actual probabilities. The infection probability is approximated to simulate a realistic spread. <br>
+    Under the "Actions" tab, you can enact a travel ban, the compulsory wearing of face masks as well as social distancing" All of these regulations can of course be undone. <br>
+    Under Info, you can find the statistics displaying how many people are in a certain state of an illness. <br>
+    The reset button leads to a hard reset and restarts the whole simulation as well as all the settings.
+    <br><br>
+    
+
+
+    </p>
+        </div>
+        
+        
+        <div class="container">
+            <div id="settings">
+                <h3>Settings:</h3>
+                <p><b id="infectionProbabilityText"></b>% infection probability</p>
+                <input type="range" id="infectionProbability" min="1" max="100" value="50"/>
+                <p><b id="days_ill_text"></b> contagious days</p>
+                <input type="range" id="days_ill" min="1" max="20" value="12"/>
+                <p><b id="probability_severe_text"></b>% severe disease</p>
+                <input type="range" id="probability_severe" min="5" max="80" value="15" step="0.01"/>
+                <p>A day is <b id="day_speed_text"></b> seconds long</p>
+                <input type="range" id="day_speed" min="25" max="300" value="200" step="25"/>
+                <p><b id="hospial_capacity_text"></b>% of ICU's</p>
+                <input type="range" id="hospial_capacity" min="0.001" max="0.1" value="0.02119" step="0.01"/>
+            </div>
+            <div id="actions">
+                <h3>Actions:</h3>
+                <button type="button" id="travelBan" class="btn"><span id="travelBan_text">Enact</span> travel ban</button>
+                <br><br>
+                <button type="button" id="faceMasks" class="btn"><span id="faceMasks_text">Enact</span> compulsory wearing of face masks</button>
+                <br><br>
+                <button type="button" id="socialDistancing" class="btn"><span id="socialDistancing_text">Enact</span> social distancing</button>
+            </div>
+            <div id="info">
+                <h3>Info:</h3>
+                <p id="towns">Towns: 0</p>
+                <p id="days">Days: 0</p>
+                <p id="people">People: 0</p>
+                <p id="healthy">Healthy: 0</p>
+                <p id="infected_not_severe">Infected not severe: 0</p>
+                <p id="infected_severe">Infected severe: 0</p>
+                <p id="immune">Immune: 0</p>
+                <p id="dead">Dead: 0</p>
+            </div>
+        <div id="reset">
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+</div>
+</main>
+</body>
+</html>

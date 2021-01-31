@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow:auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  padding: 0;
+
+  background: linear-gradient(to right,#C9D6FF, #E2E2E2);
+  //   background: linear-gradient(to right, #2c3e50, #3498db);
+  font-family: "Montserrat";
+}
+
+
+
+.container {
+    grid-area: container;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+
+#settings {
+    margin-left: 10px;
+}
+
+#settings p {
+    margin-top:5px;
+}
+
+#settings input {
+    margin-top:5px;
+}
+
+#settings h3 {
+    margin-bottom: 20px;
+    font-size: 30px;
+
+}
+
+#info {
+    margin-left: 20px;
+}
+
+#info h3 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+#info p {
+    font-size: 22px;
+}
+
+#actions {
+    margin-left: 20px;
+}
+
+#actions button {
+    font-size: 22px;
+}
+
+#actions h3 {
+    margin-bottom: 20px;
+    font-size: 30px;
+
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Montserrat&display=swap');
+
+
+header {
+    padding: 80px;
+    margin-bottom: 10px;
+    box-sizing: border-box; //! ?
+    background: url(https://image.freepik.com/vektoren-kostenlos/coronavirus-2019-ncov-und-virushintergrund-mit-krankheitszellen-covid-19-corona-virus-ausbruch-und-pandemie-konzept-fuer-das-medizinische-gesundheitsrisiko_139523-181.jpg);
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 80% 80% / 30%;
+    color: #fff;
+    
+    .overlay {
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        color: #fff;
+        text-shadow: 1px 1px 1px #333;
+        background-image: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%);
+    }
+    
+    p {
+        padding: 2px;
+        background-color: rgba(0, 0, 0, 0.42);
+    }
+}
+
+h1 {
+    font-family: Lobster cursive;
+    font-size: 64px;
+    margin-bottom: 35px;
+}
+
+.subText {
+    font-family: "Opse sans", sans-serif;
+    margin-bottom: 30px;
+}
+
+#reset {
+    padding-left: 50px;
+}
+
+#resetBtn {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#resetBtn:hover {
+    background-color: #b6372d;
+
+}
+
+#sketch-holder {
+    grid-area: sketchholder;
+}
+
+#text {
+    grid-area: text;
+    margin: 10px;
+    
+    p {
+        font-size: 20px;
+        font-family: Fraunces;
+    }
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: 70% 30%;
+    // grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "sketchholder text"
+    "container container"
+    ;
+}
