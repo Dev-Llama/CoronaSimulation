@@ -134,7 +134,7 @@ function infections(patient, town) {
       if (faceMasks) {
         add = 30;
       }
-      if (random(100) <= infection_probability + add) {
+      if (random(100) <= infection_probability - add) {
         person.infection();
       }
     }
