@@ -22,7 +22,7 @@ body {
     grid-area: container;
     display: flex;
     justify-content: flex-start;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 
@@ -145,11 +145,12 @@ h1 {
 #text {
     grid-area: text;
     margin: 10px;
+    font-size: 16px;
     
-    p {
-        font-size: 20px;
-        font-family: Fraunces;
-    }
+    // p {
+    //     font-size: 14px;
+    //     font-family: Fraunces;
+    // }
 }
 
 .grid {
@@ -157,7 +158,7 @@ h1 {
     width: 100%;
 
     grid-template-columns: 70% 30%;
-    // grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 68% 32%;
     grid-template-areas: 
     "sketchholder text"
     "container container"
